@@ -1,0 +1,36 @@
+{
+  "name": "dental-clinic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "dental-clinic",
+  "author": "Ege",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-image": "^3.11.0",
+    "gatsby-plugin-react-i18next": "^3.0.1",
+    "gatsby-plugin-sass": "^6.11.0",
+    "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
+    "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-transformer-sharp": "^5.11.0",
+    "i18next": "^23.2.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.0.2",
+    "react-world-flags": "^1.5.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
