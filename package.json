@@ -31,6 +31,7 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "gatsby-plugin-netlify": "^5.1.0",
     "node-sass": "^9.0.0"
   }
 }
