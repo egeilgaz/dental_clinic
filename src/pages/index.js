@@ -50,6 +50,50 @@ const IndexPage = () => {
       content: 'Lorem ipsum dolor',
     },
   ]
+  const Services = [
+    {
+      image: 'big-card-1.jpg',
+      logo: 'tooth.png',
+      title: 'Teeth checkup',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      image: 'big-card-1.jpg',
+      logo: 'tooth.png',
+      title: 'Teeth checkup',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      image: 'big-card-1.jpg',
+      logo: 'tooth.png',
+      title: 'Teeth checkup',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      image: 'big-card-1.jpg',
+      logo: 'tooth.png',
+      title: 'Teeth checkup',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      image: 'big-card-1.jpg',
+      logo: 'tooth.png',
+      title: 'Teeth checkup',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      image: 'big-card-1.jpg',
+      logo: 'tooth.png',
+      title: 'Teeth checkup',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+  ]
 
   return (
     <>
@@ -58,7 +102,7 @@ const IndexPage = () => {
         <div className='container'>
           <div className='container-left'>
             <h1 className='heading-title'>
-              Go Dental Diş Kliniğine
+              Bilmemne Dental Diş Kliniğine
               <span>Hoşgeldiniz</span>
             </h1>
             <p className='heading-content'>
@@ -181,6 +225,92 @@ const IndexPage = () => {
           </div>
         ))}
       </section>
+      <section className='big-cards'>
+        <div className='big-card'>
+          <img
+            className='big-card-image'
+            src='big-card-1.jpg'
+            alt=''
+          />
+          <div className='big-card-content'>
+            <img
+              className='content-logo'
+              src='tooth.png'
+              alt=''
+            />
+            <h2 className='content-title'>Uygun Fiyat</h2>
+            <p className='content-content'>
+              Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Quam itaque nesciunt atque?
+            </p>
+          </div>
+        </div>
+        <div className='big-card-2'>
+          <img
+            className='big-card-image'
+            src='big-card-2.jpg'
+            alt=''
+          />
+          <div className='big-card-content'>
+            <img
+              className='content-logo'
+              src='tooth.png'
+              alt=''
+            />
+            <h2 className='content-title'>Uygun Fiyat</h2>
+            <p className='content-content'>
+              Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Quam itaque nesciunt atque?
+            </p>
+          </div>
+        </div>
+        <img src='big-card-3.jpg' alt='' />
+      </section>
+      <section className='services'>
+        <div className='container'>
+          <div className='title-side'>
+            <h1 className='heading-title'>
+              <span>Best quality</span>
+              services
+            </h1>
+            <p className='heading-content'>
+              Lorem ipsum dolor sit amet, consectetuer
+              adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa.
+            </p>
+          </div>
+          <div className='services-card-list'>
+            {Services.map((item) => (
+              <div className='services-card'>
+                <img
+                  className='card-image'
+                  src='big-card-1.jpg'
+                  alt=''
+                />
+
+                <div className='card-content'>
+                  <div className='header'>
+                    <img
+                      className='logo'
+                      src='tooth.png'
+                      alt=''
+                    />
+                    <h3>Teeth checkup</h3>
+                  </div>
+                  <p className='content'>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit
+                  </p>
+                  <Link className='link' to='/'>
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   )

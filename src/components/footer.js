@@ -38,7 +38,10 @@ function Footer() {
     },
   ]
   const contactInfos = [
-    { icon: 'map', content: 'Korutürk, Özağaç Sk., 35330 Balçova/İzmir' },
+    {
+      icon: 'map',
+      content: 'Korutürk, Özağaç Sk., 35330 Balçova/İzmir',
+    },
     { icon: 'phone', content: '+90 (533) 636 9296' },
   ]
   return (
@@ -47,7 +50,7 @@ function Footer() {
         <Link to='/' className='logo'>
           <img className='logo-image' src={logo} />
           <div className='logo-name'>
-            Go
+            Bilmemne
             <span>Dental</span>
           </div>
         </Link>

@@ -36,7 +36,7 @@ function Header() {
         <Link to='/' className='logo'>
           <img className='logo-image' src={logo} />
           <div className='logo-name'>
-            Go
+            Bilmemne
             <span>Dental</span>
           </div>
         </Link>
