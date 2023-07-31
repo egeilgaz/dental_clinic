@@ -1,5 +1,5 @@
 import {
-  useTranslation,
+  //useTranslation,
   Link,
 } from 'gatsby-plugin-react-i18next'
 import { graphql } from 'gatsby'
@@ -10,7 +10,7 @@ import { SEO } from '../components/seo'
 import '../assets/sass/styles.sass'
 
 const IndexPage = () => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   const Cards = [
     {
@@ -53,42 +53,42 @@ const IndexPage = () => {
   const Services = [
     {
       image: 'big-card-1.jpg',
-      logo: 'tooth.png',
+      logo: 'implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
       image: 'big-card-1.jpg',
-      logo: 'tooth.png',
+      logo: 'implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
       image: 'big-card-1.jpg',
-      logo: 'tooth.png',
+      logo: 'implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
       image: 'big-card-1.jpg',
-      logo: 'tooth.png',
+      logo: 'implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
       image: 'big-card-1.jpg',
-      logo: 'tooth.png',
+      logo: 'implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
       image: 'big-card-1.jpg',
-      logo: 'tooth.png',
+      logo: 'implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
@@ -100,6 +100,9 @@ const IndexPage = () => {
       <Header />
       <section className='welcome-card'>
         <div className='container'>
+          <div className='small-title'>
+            We are BilmemneDental
+          </div>
           <div className='container-left'>
             <h1 className='heading-title'>
               Bilmemne Dental Diş Kliniğine
@@ -127,8 +130,8 @@ const IndexPage = () => {
         </div>
       </section>
       <section className='about-clinic'>
-        {Cards.map((item) => (
-          <div className='about-card'>
+        {Cards.map((item, index) => (
+          <div key={index} className='about-card'>
             <img
               className='about-card-image'
               src={item.icon}
@@ -157,6 +160,9 @@ const IndexPage = () => {
               src='about-us-card.png'
               alt=''
             />
+          </div>
+          <div className='small-title'>
+            We are BilmemneDental
           </div>
           <div className='container-right'>
             <h1 className='heading-title'>
@@ -209,8 +215,8 @@ const IndexPage = () => {
         </div>
       </section>
       <section className='numbers'>
-        {Numbers.map((item) => (
-          <div className='number-card'>
+        {Numbers.map((item, index) => (
+          <div key={index} className='number-card'>
             <img
               className='number-card-image'
               src={item.icon}
@@ -268,11 +274,14 @@ const IndexPage = () => {
       </section>
       <section className='services'>
         <div className='container'>
+          <div className='small-title'>
+            We are BilmemneDental
+          </div>
           <div className='title-side'>
-            <h1 className='heading-title'>
+            <h2 className='heading-title'>
               <span>Best quality</span>
               services
-            </h1>
+            </h2>
             <p className='heading-content'>
               Lorem ipsum dolor sit amet, consectetuer
               adipiscing elit. Aenean commodo ligula eget
@@ -280,8 +289,8 @@ const IndexPage = () => {
             </p>
           </div>
           <div className='services-card-list'>
-            {Services.map((item) => (
-              <div className='services-card'>
+            {Services.map((item, index) => (
+              <div key={index} className='services-card'>
                 <img
                   className='card-image'
                   src='big-card-1.jpg'
@@ -292,7 +301,7 @@ const IndexPage = () => {
                   <div className='header'>
                     <img
                       className='logo'
-                      src='tooth.png'
+                      src={item.logo}
                       alt=''
                     />
                     <h3>Teeth checkup</h3>
@@ -307,6 +316,36 @@ const IndexPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className='contact-us'>
+        <div className='container'>
+          <div className='small-title'>
+            We are BilmemneDental
+          </div>
+          <div className='title-side'>
+            <h2 className='heading-title'>
+              Become The Next Our
+              <span>Happy Client</span>
+            </h2>
+            <p className='heading-content'>
+              Lorem ipsum dolor sit amet, consectetuer
+              adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa.
+            </p>
+          </div>
+          <div className='image-side'>
+            <img
+              className='image-bg'
+              src='welcome-image-bg.png'
+              alt=''
+            />
+            <img
+              className='heading-image'
+              src='contact-us.png'
+              alt=''
+            />
           </div>
         </div>
       </section>

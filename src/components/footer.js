@@ -59,8 +59,8 @@ function Footer() {
           elit.
         </p>
         <ul className='socail-media-list'>
-          {socailMedias.map((item) => (
-            <li>
+          {socailMedias.map((item,index) => (
+            <li key={index}>
               <Link
                 className='socail-media-list-item'
                 to={'/' + item.link}
@@ -72,8 +72,8 @@ function Footer() {
         </ul>
       </div>
       <ul className='footer-menu-list'>
-        {Links.map((item) => (
-          <li>
+        {Links.map((item,index) => (
+          <li key={index}>
             <Link
               className='footer-menu-list-item'
               to={'/' + item.link}
@@ -85,8 +85,8 @@ function Footer() {
       </ul>
 
       <ul className='contact-list'>
-        {contactInfos.map((item) => (
-          <li className='contact-list-item'>
+        {contactInfos.map((item,index) => (
+          <li key={index} className='contact-list-item'>
             <img
               className='item-image'
               src={`${item.icon}.png`}

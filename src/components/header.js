@@ -30,6 +30,11 @@ function Header() {
       name: t('contact'),
     },
   ]
+  // var openNavMenu = false
+  // const openMobilMenu = () => {
+  //   console.log(openNavMenu)
+  //   openNavMenu = !openNavMenu
+  // }
   return (
     <header className='main-header'>
       <div className='container'>
@@ -44,12 +49,14 @@ function Header() {
           <img
             className='hamburger-menu'
             src={hamburgerMenu}
+            
           />
+          {/* onClick={openMobilMenu()} */}
 
           <nav className='menu'>
             <ul className='menu-list'>
-              {Links.map((item) => (
-                <li>
+              {Links.map((item, index) => (
+                <li key={index}>
                   <Link
                     className='menu-list-item'
                     to={'/' + item.link}
@@ -71,6 +78,11 @@ function Header() {
           </nav>
         </div>
       </div>
+      {/* {!openNavMenu && (
+        <div className='side-menu'>
+          basınca burası açılıyor
+        </div>
+      )} */}
     </header>
   )
 }
