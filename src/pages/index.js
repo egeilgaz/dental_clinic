@@ -162,7 +162,7 @@ const IndexPage = () => {
             />
           </div>
           <div className='small-title'>
-            We are BilmemneDental
+            About Us
           </div>
           <div className='container-right'>
             <h1 className='heading-title'>
@@ -275,7 +275,7 @@ const IndexPage = () => {
       <section className='services'>
         <div className='container'>
           <div className='small-title'>
-            We are BilmemneDental
+            Our Services
           </div>
           <div className='title-side'>
             <h2 className='heading-title'>
@@ -322,7 +322,7 @@ const IndexPage = () => {
       <section className='contact-us'>
         <div className='container'>
           <div className='small-title'>
-            We are BilmemneDental
+            Contact Us
           </div>
           <div className='title-side'>
             <h2 className='heading-title'>
