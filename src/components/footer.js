@@ -7,15 +7,15 @@ function Footer() {
   const { t } = useTranslation()
   const socailMedias = [
     {
-      icon: 'twitter',
+      icon: '/twitter',
       link: 'https://www.instagram.com/gulsanacikbasonenklinik/',
     },
     {
-      icon: 'facebook',
+      icon: '/facebook',
       link: 'https://www.instagram.com/gulsanacikbasonenklinik/',
     },
     {
-      icon: 'instagram',
+      icon: '/instagram',
       link: 'https://www.instagram.com/gulsanacikbasonenklinik/',
     },
   ]
@@ -39,10 +39,10 @@ function Footer() {
   ]
   const contactInfos = [
     {
-      icon: 'map',
+      icon: '/map',
       content: 'Korutürk, Özağaç Sk., 35330 Balçova/İzmir',
     },
-    { icon: 'phone', content: '+90 (533) 636 9296' },
+    { icon: '/phone', content: '+90 (533) 636 9296' },
   ]
   return (
     <footer className='footer'>

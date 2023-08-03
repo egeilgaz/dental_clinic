@@ -32,7 +32,6 @@ const IndexPage = () => {
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam itaque nesciunt atque?',
     },
   ]
-
   const Numbers = [
     {
       icon: 'tooth.png',
