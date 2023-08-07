@@ -3,7 +3,10 @@ import {
   Link,
   useI18next,
 } from 'gatsby-plugin-react-i18next'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import {
+  useTranslation,
+  i18n,
+} from 'gatsby-plugin-react-i18next'
 import logo from '../../static/logo.png'
 import hamburgerMenu from '../assets/icons/hamburger-menu.png'
 import closeIcon from '../assets/icons/close.png'
@@ -11,7 +14,7 @@ import Flag from 'react-world-flags'
 
 function Header() {
   const { languages, originalPath } = useI18next()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const Links = [
     {
@@ -32,6 +35,7 @@ function Header() {
     },
   ]
   const [openNavMenu, setOpenNavMenu] = useState(false)
+  const [languageList, setLanguageList] = useState(false)
   return (
     <header className='main-header'>
       <div className='container'>
@@ -89,32 +93,62 @@ function Header() {
                 className='close-menu'
                 onClick={() => setOpenNavMenu(!openNavMenu)}
               >
-                <img className='close-menu-icon' src={closeIcon} />
+                <img
+                  className='close-menu-icon'
+                  src={closeIcon}
+                />
               </button>
             </div>
             <nav className='menu'>
-            <ul className='menu-list'>
-              {Links.map((item, index) => (
-                <li className='menu-list-item' key={index}>
-                  <Link
+              <ul className='menu-list'>
+                {Links.map((item, index) => (
+                  <li
                     className='menu-list-item'
-                    to={'/' + item.link}
+                    key={index}
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            {/* <ul className='languages'>
-              {languages.map((lng) => (
-                <li key={lng}>
-                  <Link to={originalPath} language={lng}>
-                    <Flag code={lng} />
-                  </Link>
-                </li>
-              ))}
-            </ul> */}
-          </nav>
+                    <Link
+                      className='menu-list-item'
+                      to={'/' + item.link}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div
+                onClick={() =>
+                  setLanguageList(!languageList)
+                }
+                className='language-select'
+              >
+                <span className='select-title'>Dil:</span>
+                <Flag
+                  className='flag'
+                  code={i18n.language}
+                />
+                <span className='language-name'>
+                  {i18n.language}
+                </span>
+              </div>
+              {languageList && (
+                <ul className='languages'>
+                  {languages.map((lng) => (
+                    <li key={lng}>
+                      <Link
+                        className='language'
+                        to={originalPath}
+                        language={lng}
+                      >
+                        <Flag code={lng} />
+                        <span className='language-name'>
+                          {lng}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </nav>
           </div>
         </div>
       )}

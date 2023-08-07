@@ -49,7 +49,8 @@
         .side-menu-container
             display: flex
             flex-direction: column  
-            padding: 18px 15px       
+            padding: 18px 15px     
+            height: 100%  
 
             .side-menu-header
                 display: flex
@@ -81,22 +82,61 @@
 
             .menu
                 display: flex
-                align-items: center
+                flex-direction: column
+                justify-items: center
+                height: 100%
+
                 .menu-list
                     display: flex
                     flex-direction: column
                     list-style-type: none
                     margin-right: 20px
+                    min-height: 65%
+
                     &-item
                         color: $black
                         font-weight: 700
                         text-decoration: none
                         margin-bottom: 25px
+                        
                         &:hover
                             color: $blue
+                
+                .language-select
+                    border-top:1px solid #EEEEEE
+                    padding: 15px 0 0 0
+                    color: $black
+                    font-weight: 600
+                    display: flex
+
+                    .select-title
+                        margin-right: 10px
+
+                    .flag
+                        width: 25px
+
+                    .language-name
+                        text-transform: uppercase
+                        margin-left: 5px
+
                 .languages
                     display: flex
                     flex-direction: column
                     list-style-type: none
-                    padding: 0 10px
-            
+                    margin-left: 35px
+                    border: 1px solid #EEEEEE
+                    width:90px
+                    padding: 8px
+                    margin-top: 10px
+
+                    .language
+                        display: flex
+                        width: 25px
+                        text-decoration: none
+                    
+                        .language-name
+                            text-transform: uppercase
+                            margin-left: 5px
+                            color: $black
+                            font-weight: 600
+                            
