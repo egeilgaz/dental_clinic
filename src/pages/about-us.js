@@ -231,8 +231,8 @@ function aboutUs() {
         </div>
       </section>
       <section className='contact-us'>
+        <div className='small-title'>Contact Us</div>
         <div className='container'>
-          <div className='small-title'>Contact Us</div>
           <div className='title-side'>
             <h2 className='heading-title'>
               Become The Next Our

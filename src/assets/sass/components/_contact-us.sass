@@ -1,34 +1,42 @@
 .contact-us
     margin: 25px 10px
+    background-color: $light-blue
+    padding-top: 20px
 
     .container
-        padding: 40px 20px 0px 20px
+        padding: 20px 20px 0px 20px
         background-color: $light-blue
         text-align: center
         display: flex
         flex-direction: column
 
-        .heading-title
-            font-size: 48px
-            font-weight: 700
-            text-align: center
-            line-height: 1.1
-            letter-spacing: -1.5px
-            color: $black
+        .title-side
             display: flex
             flex-direction: column
-            margin-bottom: 20px
+            align-items: center
 
-            span
-                color: $blue
+            .heading-title
+                font-size: 48px
                 font-weight: 700
-                
-        .heading-content
-            font-size: 15px
-            line-height: 1.6
-            text-align: center
-            color: $gray
-            font-weight: 500
+                text-align: center
+                line-height: 1.1
+                letter-spacing: -1.5px
+                color: $black
+                display: flex
+                flex-direction: column
+                margin-bottom: 20px
+
+                span
+                    color: $blue
+                    font-weight: 700
+                    
+            .heading-content
+                font-size: 15px
+                line-height: 1.6
+                text-align: center
+                color: $gray
+                font-weight: 500
+                max-width: 450px
     
         .image-side
             position: relative
@@ -36,9 +44,8 @@
 
             .image-bg
                 position: absolute
-                max-width: 70%
-                left:25px
-                top: 140px
+                max-width: 250px
+                margin: 150px auto
                 transform: rotate(110deg)
                 scale: 1.35
                 
