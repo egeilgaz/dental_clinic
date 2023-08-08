@@ -139,7 +139,7 @@ function Header() {
                         to={originalPath}
                         language={lng}
                       >
-                        <Flag code={lng} />
+                        <Flag className='flag' code={lng} />
                         <span className='language-name'>
                           {lng}
                         </span>

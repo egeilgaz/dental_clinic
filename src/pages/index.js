@@ -160,9 +160,7 @@ const IndexPage = () => {
               alt=''
             />
           </div>
-          <div className='small-title'>
-            About Us
-          </div>
+          <div className='small-title'>About Us</div>
           <div className='container-right'>
             <h1 className='heading-title'>
               the best
@@ -231,51 +229,45 @@ const IndexPage = () => {
         ))}
       </section>
       <section className='big-cards'>
-        <div className='big-card'>
-          <img
-            className='big-card-image'
-            src='big-card-1.jpg'
-            alt=''
-          />
-          <div className='big-card-content'>
-            <img
-              className='content-logo'
-              src='tooth.png'
-              alt=''
-            />
-            <h2 className='content-title'>Uygun Fiyat</h2>
-            <p className='content-content'>
-              Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Quam itaque nesciunt atque?
-            </p>
+        <div className='big-cards-left'>
+          <div className='big-card'>
+            <div className='big-card-image'></div>
+            <div className='big-card-content'>
+              <img
+                className='content-logo'
+                src='tooth.png'
+                alt=''
+              />
+              <h2 className='content-title'>Uygun Fiyat</h2>
+              <p className='content-content'>
+                Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Quam itaque nesciunt
+                atque?
+              </p>
+            </div>
+          </div>
+          <div className='big-card-2'>
+            <div className='big-card-2-image'></div>
+            <div className='big-card-content'>
+              <img
+                className='content-logo'
+                src='tooth.png'
+                alt=''
+              />
+              <h2 className='content-title'>Uygun Fiyat</h2>
+              <p className='content-content'>
+                Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Quam itaque nesciunt
+                atque?
+              </p>
+            </div>
           </div>
         </div>
-        <div className='big-card-2'>
-          <img
-            className='big-card-image'
-            src='big-card-2.jpg'
-            alt=''
-          />
-          <div className='big-card-content'>
-            <img
-              className='content-logo'
-              src='tooth.png'
-              alt=''
-            />
-            <h2 className='content-title'>Uygun Fiyat</h2>
-            <p className='content-content'>
-              Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Quam itaque nesciunt atque?
-            </p>
-          </div>
-        </div>
-        <img src='big-card-3.jpg' alt='' />
+        <div className='big-card-3'></div>
       </section>
       <section className='services'>
         <div className='container'>
-          <div className='small-title'>
-            Our Services
-          </div>
+          <div className='small-title'>Our Services</div>
           <div className='title-side'>
             <h2 className='heading-title'>
               <span>Best quality</span>
@@ -320,9 +312,7 @@ const IndexPage = () => {
       </section>
       <section className='contact-us'>
         <div className='container'>
-          <div className='small-title'>
-            Contact Us
-          </div>
+          <div className='small-title'>Contact Us</div>
           <div className='title-side'>
             <h2 className='heading-title'>
               Become The Next Our
