@@ -1,11 +1,58 @@
 @media (min-width: 1024px) 
-    .header-right
-        .menu
-            display: none
+    .main-header
+        background-color: $white
+        padding: 0 15px
+        height: 75px
+        box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.1)
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+        .container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 980px
+            margin: 0 auto
+
+            .logo
+                display: flex
+                align-content: center
+                font-weight: 600
+                font-size: 20px
+                font-weight: bold
+                .logo-name
+                    margin-top: 4px
+                    span
+                        color: $blue
+                .logo-image
+                    width: 40px
+
+            .header-right
+                .hamburger-menu
+                    display: none
+                .menu
+                    display: flex
+                    align-items: center
+                    .menu-list
+                        display: flex
+                        min-width: 450px
+                        justify-content: space-around
+                        list-style-type: none
+                        margin-right: 20px
+                        &-item
+                            color: $black
+                            font-weight: 600
+                            text-decoration: none
+                            &:hover
+                                color: $blue
+                    .languages
+                        display: flex
+                        flex-direction: column
+                        list-style-type: none
+                        padding: 0 10px
 
     .big-cards 
         flex-direction: row
         height: 500px
+        margin-bottom: 40px
         
         .big-cards-left
             display: flex
@@ -49,7 +96,7 @@
     .services
         .container 
             max-width: 1280px
-            margin: 0 auto     
+            margin: 0 auto 40px auto   
             .services-card-list
                 display: grid
                 grid-template-columns: repeat(3, minmax(0, 1fr))
@@ -120,7 +167,7 @@
 
         .container
             flex-direction: row
-            max-width: 1280px
+            max-width: 1000px
             justify-content: center
             align-items: center
             padding: 0 20px
@@ -128,3 +175,86 @@
         
             .image-side
                 margin-left: 50px
+
+    .welcome-card
+        .container
+            margin: 30px auto
+            flex-direction: row
+            padding: 0 15px
+            max-width: 1000px
+
+            &-left
+                .heading-title
+                    font-size: 50px
+                    text-align: start
+                    margin-bottom: 40px
+                    span
+                        font-weight: 700
+                
+                .heading-content
+                    font-size: 16px
+                    text-align: start
+            
+            &-right
+                height: 500px
+
+                .image-bg
+                    position: absolute
+                    max-width: 330px                    
+            
+                .heading-image
+                    padding: 125px 10px 0 10px
+
+    .about-us
+        .container
+            flex-direction: row
+            width: 1000px
+            margin: 0 auto 40px auto
+            justify-content: space-evenly
+
+            &-left
+                .image-bg
+                    max-width: 500px
+                    
+
+                .heading-image
+                    max-width: 390px
+
+
+            &-right                
+                .heading-content
+                    max-width: 400px
+
+    .about-clinic
+        width: 1000px
+        margin: 40px auto
+        padding: 0
+
+    .our-team
+        .container
+            padding: 0 15px
+            width: 925px
+            margin: 0 auto
+
+            .small-title
+                margin: 15px 0
+
+            
+            .title-side
+                display: flex
+                justify-content: space-between
+
+                .heading-title
+                    flex-direction: row
+
+                    span
+                        margin-left: 15px
+                
+                .heading-content
+                    font-size: 15px
+                    line-height: 1.6
+                    text-align: left
+                    color: $gray
+                    font-weight: 500
+                    margin-bottom: 25px
+                    max-width: 400px

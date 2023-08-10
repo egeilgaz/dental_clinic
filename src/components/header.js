@@ -66,15 +66,36 @@ function Header() {
                 </li>
               ))}
             </ul>
-            <ul className='languages'>
-              {languages.map((lng) => (
-                <li key={lng}>
-                  <Link to={originalPath} language={lng}>
-                    <Flag code={lng} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div
+              onClick={() => setLanguageList(!languageList)}
+              className='header-language-select'
+            >
+              <span className='select-title'>
+                <img src='/language.png' alt='' />
+              </span>
+              {/* <Flag className='flag' code={i18n.language} /> */}
+              <span className='language-name'>
+                {i18n.language}
+              </span>
+              {languageList && (
+                <ul className='languages'>
+                  {languages.map((lng) => (
+                    <li key={lng}>
+                      <Link
+                        className='language'
+                        to={originalPath}
+                        language={lng}
+                      >
+                        <Flag className='flag' code={lng} />
+                        <span className='language-name'>
+                          {lng}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </nav>
         </div>
       </div>

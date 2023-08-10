@@ -74,13 +74,6 @@ function aboutUs() {
               penatibus et magnis dis parturient.
             </p>
           </div>
-          <div className='container-right'>
-            <img
-              className='heading-image'
-              src='/big-card-1.jpg'
-              alt=''
-            />
-          </div>
         </div>
       </section>
       <section className='about-us'>
@@ -97,8 +90,8 @@ function aboutUs() {
               alt=''
             />
           </div>
-          <div className='small-title'>About Clinic</div>
           <div className='container-right'>
+            <div className='small-title'>About Clinic</div>
             <h1 className='heading-title'>
               the best
               <span>dental clinic</span>
@@ -167,8 +160,8 @@ function aboutUs() {
         ))}
       </section>
       <section className='our-team'>
+        <div className='small-title'>Our Team</div>
         <div className='container'>
-          <div className='small-title'>Our Team</div>
           <div className='title-side'>
             <h2 className='heading-title'>
               Our Expert
@@ -181,9 +174,13 @@ function aboutUs() {
             </p>
           </div>
           <div className='team-card-list'>
-            {MemberList.map((item) => (
-              <div className='team-card'>
-                <img src={item.image} alt='' />
+            {MemberList.map((item,index) => (
+              <div key={index} className='team-card'>
+                <img
+                  className='team-card-image'
+                  src={item.image}
+                  alt=''
+                />
                 <p className='team-info'>
                   <h2 className='member-name'>
                     {item.name}
@@ -212,8 +209,8 @@ function aboutUs() {
             </p>
           </div>
           <div className='question-list'>
-            {QuestionList.map((item) => (
-              <details className='question'>
+            {QuestionList.map((item,index) => (
+              <details key={index} className='question'>
                 <summary>
                   {item.question}
                   <span>

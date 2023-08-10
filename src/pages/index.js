@@ -8,6 +8,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { SEO } from '../components/seo'
 import '../assets/sass/styles.sass'
+import { useEffect } from 'react'
 
 const IndexPage = () => {
   // const { t } = useTranslation()
@@ -94,15 +95,21 @@ const IndexPage = () => {
     },
   ]
 
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [])
+
   return (
     <>
       <Header />
+
       <section className='welcome-card'>
         <div className='container'>
-          <div className='small-title'>
-            We are BilmemneDental
-          </div>
           <div className='container-left'>
+            <div className='small-title'>
+              We are BilmemneDental
+            </div>
             <h1 className='heading-title'>
               Bilmemne Dental Diş Kliniğine
               <span>Hoşgeldiniz</span>
@@ -151,7 +158,7 @@ const IndexPage = () => {
           <div className='container-left'>
             <img
               className='image-bg'
-              src='welcome-image-bg.png'
+              src='about-us-image-bg.png'
               alt=''
             />
             <img
@@ -160,8 +167,8 @@ const IndexPage = () => {
               alt=''
             />
           </div>
-          <div className='small-title'>About Us</div>
           <div className='container-right'>
+            <div className='small-title'>About Us</div>
             <h1 className='heading-title'>
               the best
               <span>dental clinic</span>
@@ -338,6 +345,17 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+      <button
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          })
+        }}
+      >
+        yukarı
+      </button>
 
       <Footer />
     </>

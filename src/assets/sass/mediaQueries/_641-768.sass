@@ -6,6 +6,7 @@
     .about-clinic
         display: flex
         flex-direction: row
+        padding: 0 20px
   
     .numbers
         flex-direction: row
@@ -125,6 +126,31 @@
                             text-decoration: none
                             font-weight: 700
     
+    .contact-us
+        margin: 25px auto
+        max-width: 1400px
+
+        .container
+            flex-direction: row
+            max-width: 1000px
+            justify-content: center
+            align-items: center
+            padding: 0 20px
+            margin: -80px auto 0 auto
+
+            .image-side
+                margin-left: 50px
+
+                .image-bg
+                    max-width: 180px
+                    margin: 143px 19px
+                    
+                .heading-image
+                    position: relative
+                    padding: 45px 10px 0 10px
+                    max-width: 85%
+                    z-index: 9
+
     .faq
         margin-top: 45px
         .container
@@ -141,3 +167,30 @@
                 .question    
                     width: 600px  
                     margin: 0 auto 20px auto
+                
+    .about-us
+        .container
+            &-left
+                .image-bg
+                    max-width: 360px
+                    
+
+                .heading-image
+                    max-width: 180px
+
+            &-right
+                .heading-title
+                    margin-bottom: 34px
+                
+                .feature-list
+                    display: grid
+                    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+    .our-team
+        .container
+            
+            .team-card-list
+                display: flex
+                flex-direction: row
+                justify-content: space-evenly
+                

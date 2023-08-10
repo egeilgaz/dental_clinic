@@ -146,8 +146,8 @@ function services() {
             </p>
           </div>
           <div className='question-list'>
-            {QuestionList.map((item) => (
-              <details className='question'>
+            {QuestionList.map((item,index) => (
+              <details key={index} className='question'>
                 <summary>
                   {item.question}
                   <span>
