@@ -41,6 +41,9 @@
                             color: $black
                             font-weight: 600
                             text-decoration: none
+
+                            &.active
+                                color: $blue
                             &:hover
                                 color: $blue
                     .languages
@@ -95,7 +98,7 @@
 
     .services
         .container 
-            max-width: 1280px
+            width: 980px
             margin: 0 auto 40px auto   
             .services-card-list
                 display: grid
@@ -161,9 +164,13 @@
                     width: 850px  
                     margin: 0 auto 20px auto
             
+    .numbers
+        .number-card
+            width: 450px
+
     .contact-us
         margin: 25px auto
-        max-width: 1400px
+        width: 980px
 
         .container
             flex-direction: row
@@ -258,3 +265,11 @@
                     font-weight: 500
                     margin-bottom: 25px
                     max-width: 400px
+
+    .footer
+        justify-content: center
+        .footer-menu-list
+            list-style-type: none
+            margin: 0 0 0 -90px 
+            display: flex
+            justify-content: space-evenly

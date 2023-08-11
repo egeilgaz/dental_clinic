@@ -59,6 +59,7 @@ function Header() {
                 <li key={index}>
                   <Link
                     className='menu-list-item'
+                    activeClassName="active"
                     to={'/' + item.link}
                   >
                     {item.name}
@@ -73,7 +74,6 @@ function Header() {
               <span className='select-title'>
                 <img src='/language.png' alt='' />
               </span>
-              {/* <Flag className='flag' code={i18n.language} /> */}
               <span className='language-name'>
                 {i18n.language}
               </span>
@@ -129,6 +129,7 @@ function Header() {
                   >
                     <Link
                       className='menu-list-item'
+                      activeClassName="active"
                       to={'/' + item.link}
                     >
                       {item.name}

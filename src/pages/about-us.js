@@ -6,6 +6,8 @@ import {
   //useTranslation,
   Link,
 } from 'gatsby-plugin-react-i18next'
+import { SEO } from '../components/seo'
+import { useEffect, useState } from 'react'
 
 function aboutUs() {
   const Cards = [
@@ -28,7 +30,6 @@ function aboutUs() {
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam itaque nesciunt atque?',
     },
   ]
-
   const MemberList = [
     {
       image: '/contact-us.png',
@@ -55,6 +56,16 @@ function aboutUs() {
         'Cevap 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam soluta distinctio deserunt porro tempore maiores enim? Minus voluptate eligendi optio.',
     },
   ]
+  // const [showTopBtn, setShowTopBtn] = useState(false)
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     if (window.scrollY > 400) {
+  //       setShowTopBtn(true)
+  //     } else {
+  //       setShowTopBtn(false)
+  //     }
+  //   })
+  // }, [])
 
   return (
     <>
@@ -255,6 +266,28 @@ function aboutUs() {
           </div>
         </div>
       </section>
+      {/* {showTopBtn && (
+        <button
+          className='scroll-up'
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth',
+            })
+          }}
+        >
+          <img src='/arrow.png' alt='' />
+        </button>
+      )} */}
+      <a
+        href='https://wa.me/905066953207'
+        target='_blank'
+        className='whatsapp'
+      >
+        <img src='/whatsapp.png' alt='' />
+        Whatsapp
+      </a>
       <Footer />
     </>
   )
@@ -277,3 +310,10 @@ export const query = graphql`
 `
 
 export default aboutUs
+
+export const Head = () => (
+  <SEO
+    title='Hakkımızda'
+    description='Burası klinikle alakalı olan açıklama bölümü buralar önemli'
+  />
+)

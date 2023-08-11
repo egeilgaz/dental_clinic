@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { graphql } from 'gatsby'
+import { SEO } from '../components/seo'
+
 
 function contact() {
   const QuestionList = [
@@ -18,6 +20,16 @@ function contact() {
         'Cevap 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam soluta distinctio deserunt porro tempore maiores enim? Minus voluptate eligendi optio.',
     },
   ]
+  // const [showTopBtn, setShowTopBtn] = useState(false)
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     if (window.scrollY > 400) {
+  //       setShowTopBtn(true)
+  //     } else {
+  //       setShowTopBtn(false)
+  //     }
+  //   })
+  // }, [])
   return (
     <>
       <Header />
@@ -53,7 +65,7 @@ function contact() {
             </p>
           </div>
           <div className='question-list'>
-            {QuestionList.map((item,index) => (
+            {QuestionList.map((item, index) => (
               <details key={index} className='question'>
                 <summary>
                   {item.question}
@@ -71,6 +83,28 @@ function contact() {
           </div>
         </div>
       </section>
+      {/* {showTopBtn && (
+        <button
+          className='scroll-up'
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth',
+            })
+          }}
+        >
+          <img src='/arrow.png' alt='' />
+        </button>
+      )} */}
+      <a
+        href='https://wa.me/905066953207'
+        target='_blank'
+        className='whatsapp'
+      >
+        <img src='/whatsapp.png' alt='' />
+        Whatsapp
+      </a>
       <Footer />
     </>
   )
@@ -92,3 +126,10 @@ export const query = graphql`
   }
 `
 export default contact
+
+export const Head = () => (
+  <SEO
+    title='Bizimle İletişime Geçin!'
+    description='Burası klinikle alakalı olan açıklama bölümü buralar önemli'
+  />
+)

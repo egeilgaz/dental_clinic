@@ -6,6 +6,8 @@ import {
   //useTranslation,
   Link,
 } from 'gatsby-plugin-react-i18next'
+import { SEO } from '../components/seo'
+import { useEffect, useState } from 'react'
 
 function services() {
   const Services = [
@@ -66,6 +68,16 @@ function services() {
         'Cevap 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam soluta distinctio deserunt porro tempore maiores enim? Minus voluptate eligendi optio.',
     },
   ]
+  // const [showTopBtn, setShowTopBtn] = useState(false)
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     if (window.scrollY > 400) {
+  //       setShowTopBtn(true)
+  //     } else {
+  //       setShowTopBtn(false)
+  //     }
+  //   })
+  // }, [])
   return (
     <>
       <Header />
@@ -146,7 +158,7 @@ function services() {
             </p>
           </div>
           <div className='question-list'>
-            {QuestionList.map((item,index) => (
+            {QuestionList.map((item, index) => (
               <details key={index} className='question'>
                 <summary>
                   {item.question}
@@ -165,9 +177,8 @@ function services() {
         </div>
       </section>
       <section className='contact-us'>
-      <div className='small-title'>Contact Us</div>
+        <div className='small-title'>Contact Us</div>
         <div className='container'>
-          
           <div className='title-side'>
             <h2 className='heading-title'>
               Become The Next Our
@@ -193,6 +204,28 @@ function services() {
           </div>
         </div>
       </section>
+      {/* {showTopBtn && (
+        <button
+          className='scroll-up'
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth',
+            })
+          }}
+        >
+          <img src='/arrow.png' alt='' />
+        </button>
+      )} */}
+      <a
+        href='https://wa.me/905066953207'
+        target='_blank'
+        className='whatsapp'
+      >
+        <img src='/whatsapp.png' alt='' />
+        Whatsapp
+      </a>
       <Footer />
     </>
   )
@@ -214,3 +247,10 @@ export const query = graphql`
   }
 `
 export default services
+
+export const Head = () => (
+  <SEO
+    title='Bunlar da tedaviler'
+    description='Burası klinikle alakalı olan açıklama bölümü buralar önemli'
+  />
+)

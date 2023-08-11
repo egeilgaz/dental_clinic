@@ -8,26 +8,26 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { SEO } from '../components/seo'
 import '../assets/sass/styles.sass'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const IndexPage = () => {
   // const { t } = useTranslation()
 
   const Cards = [
     {
-      icon: 'card-icon.png',
+      icon: '/card-icon.png',
       title: 'Uygun Fiyat',
       content:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam itaque nesciunt atque?',
     },
     {
-      icon: 'card-icon-2.png',
+      icon: '/card-icon-2.png',
       title: 'Uygun Fiyat',
       content:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam itaque nesciunt atque?',
     },
     {
-      icon: 'card-icon-3.png',
+      icon: '/card-icon-3.png',
       title: 'Uygun Fiyat',
       content:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam itaque nesciunt atque?',
@@ -35,69 +35,75 @@ const IndexPage = () => {
   ]
   const Numbers = [
     {
-      icon: 'tooth.png',
+      icon: '/tooth.png',
       title: '1200',
       content: 'Happy Fiyat',
     },
     {
-      icon: 'clinic.png',
+      icon: '/clinic.png',
       title: '15',
       content: 'Lorem ipsum dolor',
     },
     {
-      icon: 'dentist.png',
+      icon: '/dentist.png',
       title: '70',
       content: 'Lorem ipsum dolor',
     },
   ]
   const Services = [
     {
-      image: 'big-card-1.jpg',
-      logo: 'implant.png',
+      image: '/big-card-1.jpg',
+      logo: '/implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
-      image: 'big-card-1.jpg',
-      logo: 'implant.png',
+      image: '/big-card-1.jpg',
+      logo: '/implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
-      image: 'big-card-1.jpg',
-      logo: 'implant.png',
+      image: '/big-card-1.jpg',
+      logo: '/implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
-      image: 'big-card-1.jpg',
-      logo: 'implant.png',
+      image: '/big-card-1.jpg',
+      logo: '/implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
-      image: 'big-card-1.jpg',
-      logo: 'implant.png',
+      image: '/big-card-1.jpg',
+      logo: '/implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
     {
-      image: 'big-card-1.jpg',
-      logo: 'implant.png',
+      image: '/big-card-1.jpg',
+      logo: '/implant.png',
       title: 'Teeth checkup',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
   ]
 
+  const [showTopBtn, setShowTopBtn] = useState(false)
   useEffect(() => {
-    // 👇️ scroll to top on page load
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        setShowTopBtn(true)
+      } else {
+        setShowTopBtn(false)
+      }
+    })
   }, [])
 
   return (
@@ -124,12 +130,12 @@ const IndexPage = () => {
           <div className='container-right'>
             <img
               className='image-bg'
-              src='welcome-image-bg.png'
+              src='/welcome-image-bg.png'
               alt=''
             />
             <img
               className='heading-image'
-              src='welcome-card.png'
+              src='/welcome-card.png'
               alt=''
             />
           </div>
@@ -158,12 +164,12 @@ const IndexPage = () => {
           <div className='container-left'>
             <img
               className='image-bg'
-              src='about-us-image-bg.png'
+              src='/about-us-image-bg.png'
               alt=''
             />
             <img
               className='heading-image'
-              src='about-us-card.png'
+              src='/about-us-card.png'
               alt=''
             />
           </div>
@@ -189,25 +195,25 @@ const IndexPage = () => {
             <ul className='feature-list'>
               <li className='feature-list-item'>
                 <span className='check'>
-                  <img src='check.png' alt='' />
+                  <img src='/check.png' alt='' />
                 </span>
                 Lorem, ipsum.
               </li>
               <li className='feature-list-item'>
                 <span className='check'>
-                  <img src='check.png' alt='' />
+                  <img src='/check.png' alt='' />
                 </span>
                 Lorem, ipsum.
               </li>
               <li className='feature-list-item'>
                 <span className='check'>
-                  <img src='check.png' alt='' />
+                  <img src='/check.png' alt='' />
                 </span>
                 Lorem, ipsum.
               </li>
               <li className='feature-list-item'>
                 <span className='check'>
-                  <img src='check.png' alt='' />
+                  <img src='/check.png' alt='' />
                 </span>
                 Lorem, ipsum.
               </li>
@@ -227,7 +233,7 @@ const IndexPage = () => {
               alt=''
             />
             <h2 className='number-card-title'>
-              {item.title} <img src='plus.png' alt='' />
+              {item.title} <img src='/plus.png' alt='' />
             </h2>
             <p className='number-card-content'>
               {item.content}
@@ -242,7 +248,7 @@ const IndexPage = () => {
             <div className='big-card-content'>
               <img
                 className='content-logo'
-                src='tooth.png'
+                src='/tooth.png'
                 alt=''
               />
               <h2 className='content-title'>Uygun Fiyat</h2>
@@ -258,7 +264,7 @@ const IndexPage = () => {
             <div className='big-card-content'>
               <img
                 className='content-logo'
-                src='tooth.png'
+                src='/tooth.png'
                 alt=''
               />
               <h2 className='content-title'>Uygun Fiyat</h2>
@@ -291,7 +297,7 @@ const IndexPage = () => {
               <div key={index} className='services-card'>
                 <img
                   className='card-image'
-                  src='big-card-1.jpg'
+                  src='/big-card-1.jpg'
                   alt=''
                 />
 
@@ -334,28 +340,39 @@ const IndexPage = () => {
           <div className='image-side'>
             <img
               className='image-bg'
-              src='welcome-image-bg.png'
+              src='/welcome-image-bg.png'
               alt=''
             />
             <img
               className='heading-image'
-              src='contact-us.png'
+              src='/contact-us.png'
               alt=''
             />
           </div>
         </div>
       </section>
-      <button
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-          })
-        }}
+      {showTopBtn && (
+        <button
+          className='scroll-up'
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth',
+            })
+          }}
+        >
+          <img src='/arrow.png' alt='' />
+        </button>
+      )}
+      <a
+        href='https://wa.me/905066953207'
+        target='_blank'
+        className='whatsapp'
       >
-        yukarı
-      </button>
+        <img src='/whatsapp.png' alt='' />
+        Whatsapp
+      </a>
 
       <Footer />
     </>
@@ -364,7 +381,12 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <SEO title='tamam' />
+export const Head = () => (
+  <SEO
+    title='Bilmem Ne Dentale Hoşgeldiniz'
+    description='Burası klinikle alakalı olan açıklama bölümü buralar önemli'
+  />
+)
 
 export const query = graphql`
   query ($language: String!) {
